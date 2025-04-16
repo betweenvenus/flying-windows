@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flying windows (Go edition)</title>
+	<script src="./js/wasm_exec.js"></script>
+	<script type="module">
+		const go = new Go();
+		const { instance } = await WebAssembly.instantiateStreaming(fetch("./bin/main.wasm"), go.importObject);
+		await go.run(instance);
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

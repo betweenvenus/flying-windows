@@ -1,5 +1,7 @@
 Rust/target
 Rust/pkg
 
+Go/**/*.wasm
+
 .vscode
 .idea
